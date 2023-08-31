@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class PageThree extends StatelessWidget {
-  const PageThree({super.key});
+  const PageThree({super.key, required this.id});
+  final String id;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Page Three'),
+        title:  Text('Page Three $id'),
       ),
       body: SafeArea(
         child: ElevatedButton(

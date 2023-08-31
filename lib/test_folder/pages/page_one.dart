@@ -13,9 +13,10 @@ class PageOne extends StatelessWidget {
       body: SafeArea(
         child: ElevatedButton(
           onPressed: () {
-            context.go('/two');
+            String name = 'sourav';
+            context.go('/one/three/$name');
           },
-          child: const Text('go to page two'),
+          child: const Text('go to page three'),
         ),
       ),
     );

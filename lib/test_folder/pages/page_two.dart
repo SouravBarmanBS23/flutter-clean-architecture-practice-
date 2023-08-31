@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../core/router/router_names.dart';
+
 class PageTwo extends StatelessWidget {
   const PageTwo({super.key});
 
@@ -13,9 +15,9 @@ class PageTwo extends StatelessWidget {
       body: SafeArea(
         child: ElevatedButton(
           onPressed: () {
-            context.go('/one/three');
+            context.goNamed(RouteNames.pageOne);
           },
-          child: const Text('go to page three'
+          child: const Text('go to page one'
           ),
         ),
       ),

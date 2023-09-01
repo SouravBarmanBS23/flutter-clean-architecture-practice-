@@ -15,7 +15,7 @@ class RouterConfiguration {
         name: RouteNames.profilePage,
         path: '/profile',
         builder: ((BuildContext context, GoRouterState state) {
-          final search = state.queryParameters['greetings'];
+          final search = state.uri.queryParameters['greetings'];
           return ProfilePage(greet: search);
         }),
         routes: <RouteBase>[
